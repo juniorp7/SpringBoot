@@ -1,0 +1,20 @@
+
+CREATE TABLE order (
+    order_number NUMERIC PRIMARY KEY UNIQUE,
+    product_code NUMERIC,
+    cpf VARCHAR,
+    amount NUMERIC,
+    date_sale TIMESTAMP,
+    value REAL
+);
+
+CREATE TABLE auditing (
+    id NUMERIC PRIMARY KEY UNIQUE,
+    register_code NUMERIC,
+    date TIMESTAMP,
+    operation VARCHAR
+);
+ 
+ALTER TABLE auditing ADD CONSTRAINT FK_auditing_3
+    FOREIGN KEY (register_code???, register_code)
+    REFERENCES order (???, order_number);
